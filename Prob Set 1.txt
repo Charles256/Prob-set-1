@@ -1,0 +1,85 @@
+IST256 Problem Set 1
+Name:Charles Rutagarama
+Email:crutagar@syr.edu 
+
+Answer each of the following questions by writing a Robot World program underneath the question. 
+Refer to the powerpoint slide for specifics on where the robot is located, when required.
+
+Note: You do not need to write a TurnLeft(); method. You should write any other methods you need, however.
+
+1) Exercise 1.5 from powerpoint: Move the robot from its current position to positions A -> B -> C in that order.
+Move();
+Move();
+TurnRight(); at A
+TurnLeft();
+Move();
+Move();
+Move(); at B
+TurnRight();
+Move();
+TurnLeft();
+Move(); at C
+
+
+2) Write a method called MoveBackwards() to move the robot backwards 1 square from its heading. 
+For example. if the robot is facing south at row=6 column=5, a call to MoveBackwards() should place 
+the robot at row=7 column=5, still heading south. Call the method after you write it.
+Define MoveBackwards() {
+
+TurnRight();
+TurnRight();
+Move();
+TurnRight();
+TurnRight();
+}
+
+Move backwards();
+
+3) Exercise 4.4 from powerpoint: Write a program so that if the Robot is in a row higher than 4, it moves down one square. 
+Otherwise up one square.  NOTE: The Robot’s orientation is depicted in the diagram first (facing east).
+
+Var row;
+row = GetRow();
+if(row>4) {
+TurnRight();
+Move();
+TurnLeft();
+}
+
+else {
+TurnLeft();
+}
+4) Write a method called MoveToRow(X) which moves the robot to row X where X can be any value 0-9. 
+For example a call of MoveToRow(5); moves the robot from its current row to row 5. NOTE: the robot can start in any row.
+
+Define MoveToRow(x)
+
+row = getrow();
+if(X>Row); {
+while (x>row) }
+TurnLeft();
+Move();
+TurnLeft();
+Row = Row + 1;
+
+{}
+
+else {
+while(x<row)
+TurnRight();
+Move();
+TurnLeft();
+Row = Row - 1
+} {}
+5) Exercise 9.2 from powerpoint: Write a program to sweep the entire grid, collecting all the markers on the grid (markers can be anywhere). 
+NOTE: Think of breaking down the problem into a GetMarkersInRow() method first.
+
+Move();
+Move();
+Pickmaker();
+Move();
+Pickmarker();
+Move();
+Move();
+Move();
+Pickmaker();
